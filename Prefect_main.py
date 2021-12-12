@@ -107,4 +107,4 @@ with Flow("Prefect_MLOps") as flow:
     accuracy,precision,recall,f1score = accuracymeasures(y_test, y_pred, 'weighted')
 
 #flow.run()
-flow.register(project_name="Prefect_MLOp")
+flow.register(project_name="MLOps_run")
