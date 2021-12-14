@@ -26,23 +26,29 @@ with DAG("churn_model_pipeline",
         ) as dag:
 
     # Task 1: Downloading the data
-    download_data = BashOperator(
+    # Bash operators are used to execute bash commands
+    # Dummy operator is used to check the status of the DAG and does nothing
+    load_data = BashOperator(
         task_id="download_data",
-        bash_command="python src/download_data.py"
+        bash_command="python src/data/load_data.py"
     )
 
     # Task 2: Preprocessing the data
-    preprocess_data = BashOperator(
+    # Python operators are used to execute python code
+    split_data = BashOperator(
         task_id="preprocess_data",
-        bash_command="python src/preprocess_data.py"
+        bash_command="python src/data/split_data.py"
     )
 
     # Task  : Send email notification
+    # Email operators are used to send email notifications
     send_email = EmailOperator(
         task_id="send_email",
         to="ashish.tele@uconn.edu",
         subject="Churn Model Pipeline Notification",
         html_content="<h3> Dag Run Successfully </h3>"
     )
+
+    load_data >> split_data >> send_email
 
 
