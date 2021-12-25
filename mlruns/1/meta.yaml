@@ -1,0 +1,4 @@
+artifact_location: file:///C:/Users/ashis/OneDrive/Desktop/MLOps/MLOps/MetaFlow_MLOps/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: model_automl

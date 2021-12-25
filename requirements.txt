@@ -1,0 +1,11 @@
+fastapi==0.70.0
+h2o==3.34.0.3
+mlflow==1.7.0
+pandas
+requests==2.26.0
+streamlit==1.2.0
+python-multipart==0.0.5
+uvicorn==0.15.0
+tabulate==0.8.7
+future==0.18.2
+opendatasets==0.1.20

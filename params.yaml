@@ -19,6 +19,14 @@ mlflow_config:
   run_name: random_forest
   registered_model_name: random_forest_model
   remote_server_uri: http://localhost:5000
+  experiment_name_h2o: model_automl
+  run_name_h2o: Automl_h2o
+  seed: 1992
+  max_models: 10
+  balance_classes: True
+  sort_metric: logloss
+  verbosity: info
+  exclude_algos: ['GLM', 'DRF']
  
 random_forest: 
   max_depth: 10
