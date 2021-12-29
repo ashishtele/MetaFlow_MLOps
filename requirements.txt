@@ -1,3 +1,7 @@
+# Semantic Versioning (Major.minor.patch)
+# We use comptible release functionality (PEP 440) to specify acceptable versions
+# numpy>=1.20.0,<1.21.0
+# pip install -r requirements.txt
 fastapi==0.70.0
 h2o==3.34.0.3
 mlflow==1.7.0
